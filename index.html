@@ -1,0 +1,153 @@
+================================================================================
+🚀 GUIDA RAPIDA: GITHUB PAGES PER SMART MONEY TRACKER
+================================================================================
+
+TEMPO TOTALE: 5 minuti
+COSTO: $0 (gratis)
+RISULTATO: Link diretto tipo https://tuousername.github.io/smart-money
+
+================================================================================
+STEP 1: CREA ACCOUNT GITHUB (se non ce l'hai)
+================================================================================
+
+1. Vai su https://github.com/signup
+2. Inserisci email, password, username
+3. Verifica email
+4. Scegli piano "Free"
+
+================================================================================
+STEP 2: CREA REPOSITORY
+================================================================================
+
+1. Clicca il pulsante VERDE "+" in alto a destra → "New repository"
+2. Repository name: smart-money (o come preferisci)
+3. Description: Smart Money Tracker - 13F Analysis
+4. ✅ Spunta "Public"
+5. ✅ Spunta "Add a README file"
+6. Clicca "Create repository"
+
+================================================================================
+STEP 3: CARICA I FILE
+================================================================================
+
+Nella pagina del repository:
+
+1. Clicca "Add file" → "Create new file"
+2. Nome file: index.html
+3. Copia-incolla il CODICE HTML qui sotto
+4. Scorri giù, scrivi commit message: "Initial commit"
+5. Clicca "Commit new file"
+
+================================================================================
+STEP 4: ATTIVA GITHUB PAGES
+================================================================================
+
+1. Nella pagina repository, clicca "Settings" (tab in alto)
+2. Nel menu a sinistra, clicca "Pages"
+3. Under "Source", seleziona "Deploy from a branch"
+4. Under "Branch", seleziona "main" e "/ (root)"
+5. Clicca "Save"
+6. Aspetta 2-5 minuti
+7. Ricarica la pagina, vedrai il link verde "Visit site"
+
+================================================================================
+STEP 5: FATTO! 🎉
+================================================================================
+
+Il tuo link sarà:
+https://tuousername.github.io/smart-money
+
+(sostituisci "tuousername" con il tuo username GitHub)
+
+================================================================================
+
+
+================================================================================
+📋 CODICE HTML PRONTO PER GITHUB
+================================================================================
+
+COPIA TUTTO IL CODICE SOTTO in index.html su GitHub:
+
+================================================================================
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Smart Money">
+<meta name="theme-color" content="#0A0E21">
+<meta name="description" content="Smart Money Tracker - Analisi 13F Hedge Funds">
+<title>Smart Money Tracker</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0A0E21; color: white; min-height: 100vh; padding: 20px; padding-bottom: 100px; -webkit-font-smoothing: antialiased; }
+.header { padding: 20px 0; text-align: center; }
+.header h1 { font-size: 32px; font-weight: 800; background: linear-gradient(135deg, #00D4AA 0%, #00A8E8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px; }
+.header p { color: #8B92A8; font-size: 14px; margin-top: 8px; }
+.tab-nav { display: flex; background: #141A30; padding: 6px; border-radius: 16px; margin: 20px 0; position: sticky; top: 10px; z-index: 100; backdrop-filter: blur(10px); }
+.tab-btn { flex: 1; padding: 14px 8px; border: none; background: transparent; color: #8B92A8; font-size: 13px; font-weight: 600; border-radius: 12px; cursor: pointer; transition: all 0.3s ease; }
+.tab-btn.active { background: linear-gradient(135deg, #00D4AA, #00A8E8); color: #0A0E21; box-shadow: 0 4px 15px rgba(0, 212, 170, 0.3); }
+.tab-content { display: none; animation: fadeIn 0.4s ease; }
+.tab-content.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.card { background: linear-gradient(145deg, #141A30 0%, #0f1429 100%); border-radius: 20px; padding: 24px; margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.ticker { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; }
+.company-name { font-size: 13px; color: #8B92A8; margin-top: 4px; font-weight: 500; }
+.badge { display: inline-block; padding: 8px 16px; border-radius: 20px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 12px; }
+.badge-buy { background: rgba(0, 212, 170, 0.15); color: #00D4AA; border: 1px solid rgba(0, 212, 170, 0.3); }
+.badge-sell { background: rgba(255, 71, 87, 0.15); color: #FF4757; border: 1px solid rgba(255, 71, 87, 0.3); }
+.badge-hold { background: rgba(255, 193, 7, 0.15); color: #FFC107; border: 1px solid rgba(255, 193, 7, 0.3); }
+.price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0; }
+.price-box { text-align: center; }
+.price-label { font-size: 11px; color: #8B92A8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.price-value { font-size: 22px; font-weight: 700; }
+.price-target { color: #00D4AA; }
+.price-upside { color: #00D4AA; font-weight: 800; }
+.analysis { color: #B8BDD4; font-size: 14px; line-height: 1.6; margin: 16px 0; }
+.funds { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.fund-tag { background: rgba(0, 168, 232, 0.15); color: #00A8E8; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; border: 1px solid rgba(0, 168, 232, 0.2); }
+.stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
+.stat-card { background: linear-gradient(145deg, #1a1f3a 0%, #0f1429 100%); padding: 24px 16px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.05); }
+.stat-number { font-size: 36px; font-weight: 800; background: linear-gradient(135deg, #00D4AA, #00A8E8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.stat-label { font-size: 12px; color: #8B92A8; margin-top: 6px; font-weight: 500; }
+.chat-input { width: 100%; background: #141A30; border: 1px solid rgba(255,255,255,0.1); border-radius: 25px; padding: 16px 20px; color: white; font-size: 16px; margin: 10px 0; outline: none; transition: all 0.3s; }
+.chat-input:focus { border-color: #00D4AA; box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.1); }
+.quick-questions { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.quick-q { background: rgba(0, 168, 232, 0.15); color: #00A8E8; padding: 10px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; border: 1px solid rgba(0, 168, 232, 0.2); cursor: pointer; transition: all 0.3s; }
+.quick-q:hover { background: rgba(0, 168, 232, 0.25); transform: translateY(-2px); }
+.message { margin: 12px 0; padding: 16px; border-radius: 20px; max-width: 85%; animation: slideIn 0.3s ease; }
+@keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+.message-user { background: linear-gradient(135deg, #00D4AA, #00A8E8); color: #0A0E21; margin-left: auto; font-weight: 600; }
+.message-ai { background: #141A30; border: 1px solid rgba(255,255,255,0.1); }
+.portfolio-btn { width: 100%; padding: 14px; margin: 8px 0; background: #141A30; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: #8B92A8; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.portfolio-btn.active { background: linear-gradient(135deg, #00D4AA, #00A8E8); color: #0A0E21; border: none; }
+.alloc-item { margin: 16px 0; }
+.alloc-header { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600; }
+.alloc-bar { height: 10px; background: #0f1429; border-radius: 5px; overflow: hidden; }
+.alloc-fill { height: 100%; background: linear-gradient(90deg, #00D4AA, #00A8E8); border-radius: 5px; transition: width 0.5s ease; }
+.install-banner { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(145deg, #141A30, #0f1429); padding: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; display: none; z-index: 1000; }
+.install-btn { background: linear-gradient(135deg, #00D4AA, #00A8E8); color: #0A0E21; border: none; padding: 14px 32px; border-radius: 25px; font-weight: 700; font-size: 16px; cursor: pointer; margin-top: 12px; box-shadow: 0 4px 15px rgba(0, 212, 170, 0.3); }
+.timestamp { font-size: 11px; color: #5a6078; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Smart Money</h1>
+<p>Analisi 13F • Hedge Funds • Dati Reali</p>
+</div>
+
+<div class="tab-nav">
+<button class="tab-btn active" onclick="showTab('dash', this)">Dashboard</button>
+<button class="tab-btn" onclick="showTab('signals', this)">Segnali</button>
+<button class="tab-btn" onclick="showTab('chat', this)">AI Chat</button>
+<button class="tab-btn" onclick="showTab('portfolio', this)">Portfolio</button>
+</div>
+
+<div id="dash" class="tab-content active">
+<div class="stats-grid">
+<div class="stat-card"><div class="stat-number">5</div><div class="stat-label">Hedge Funds</div></div>
+<div class="stat-card"><div class="stat-number">$366B</div><div class="stat-label">AUM Tracciato</div></div>
+<div class="stat-card"><div class="stat-number">68%</div><div class="stat-label">Sentimento</div></div>
+<div class="stat-card"><div class="stat<response clipped><NOTE>Result is longer than **10000 characters**, will be **truncated**.</NOTE>
